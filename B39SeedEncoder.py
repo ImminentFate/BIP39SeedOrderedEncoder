@@ -36,6 +36,7 @@ def fromBase(str, charset):
 
 def compactPairwise(position, seed):
     workingNum = position * 2049 + seed
+    varx = toBase(workingNum, '0123456789')
     return int(toBase(workingNum, '0123456789'))
 
 
@@ -187,11 +188,6 @@ def m2():
         exit()
 
 
-# Starts Here ===========================
-if __name__ == "__main__":
-    m2()
-
-
 # Helper Nonsense========================
 class bcolors:
     HEADER = '\033[95m'
@@ -216,3 +212,8 @@ def printHeader():
     clearConsole()
     print(bcolors.HEADER + bcolors.BOLD + 'CRYPTO BIP39 SEED PHRASE ENCODER/PACKAGER')
     print('==========================================' + bcolors.ENDC + '\n')
+
+
+# Starts Here ===========================
+if __name__ == "__main__":
+    m2()
